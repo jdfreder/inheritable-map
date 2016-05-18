@@ -1,4 +1,7 @@
 # InheritableMap
+![Build Status](https://travis-ci.org/jdfreder/inheritable-map.svg) [![codecov](https://codecov.io/gh/jdfreder/inheritable-map/branch/master/graph/badge.svg)](https://codecov.io/gh/jdfreder/inheritable-map)
+
+
 Inheritable version of the Immutable.Map data type
 
 ## Why?
@@ -31,9 +34,9 @@ To do the same thing in ES5:
 var InheritableMap = require('inheritable-map').InheritableMap;
 
 function Table() {
-  InheritableMap.prototype.apply(this, arguments);
+  InheritableMap.prototype.constructor.apply(this, arguments);
 }
-Table.prototype = Object.create(InheritableMap);
+Table.prototype = Object.create(InheritableMap.prototype);
 
 Table.prototype.toString = function toString() {
   return this.__toString('Table {', '}');
