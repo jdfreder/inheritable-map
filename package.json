@@ -1,6 +1,6 @@
 {
   "name": "inheritable-map",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Inheritable version of the Immutable.Map data type",
   "main": "lib/index.js",
   "scripts": {
